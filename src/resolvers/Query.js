@@ -8,9 +8,7 @@ const Query = {
       return null
     }
 
-    return {
-      user: await context.prisma.user({ id: userId }),
-    }
+    return context.prisma.user({ id: userId })
   },
 }
 
